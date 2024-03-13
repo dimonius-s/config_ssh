@@ -1,22 +1,22 @@
 Host *.com
         StrictHostKeyChecking no
-        User etoosamoe
+        User $User
         ForwardAgent yes
-        IdentityFile /Users/username/.ssh/id_rsa
+        IdentityFile /home/$User/.ssh/id_rsa
         IdentitiesOnly yes
         UserKnownHostsFile=/dev/null
-        UseKeychain yes
+        #UseKeychain yes
         AddKeysToAgent yes
         ServerAliveInterval 60
         ServerAliveCountMax 1200
-Host std-*
+Host host
         StrictHostKeyChecking no
-        User ci-user
+        User $User
         ForwardAgent yes
-        IdentityFile /Users/username/.ssh/id_rsa_second
+        IdentityFile /home/$User/.ssh/id_rsa_second
         IdentitiesOnly yes
         UserKnownHostsFile=/dev/null
-        UseKeychain yes
+        #UseKeychain yes
         AddKeysToAgent yes
         ServerAliveInterval 60
         ServerAliveCountMax 1200
